@@ -17,7 +17,7 @@
         })
 
         function remove_active_button() {
-            $("#header div.header-buttons button").each(function() {
+            $("header div.header-buttons button").each(function() {
                 $(this).removeClass("active");
             });
         }
@@ -29,37 +29,37 @@
 
         function courses() {
             remove_active_button();
-            $("#header div.header-buttons button:nth-child(1)").addClass("active");
+            $("header div.header-buttons button:nth-child(1)").addClass("active");
             $("#main").load("pages/courses.html");
         }
 
         function upcoming() {
             remove_active_button();
-            $("#header div.header-buttons button:nth-child(2)").addClass("active");
+            $("header div.header-buttons button:nth-child(2)").addClass("active");
             $("#main").load("pages/upcoming.html");
         }
 
         function about_us() {
             remove_active_button();
-            $("#header div.header-buttons button:nth-child(3)").addClass("active");
+            $("header div.header-buttons button:nth-child(3)").addClass("active");
             $("#main").load("pages/about_us.html");
         }
 
         function testimonials() {
             remove_active_button();
-            $("#header div.header-buttons button:nth-child(4)").addClass("active");
+            $("header div.header-buttons button:nth-child(4)").addClass("active");
             $("#main").load("pages/testimonials.html");
         }
 
         function become_partner() {
             remove_active_button();
-            $("#header div.header-buttons button:nth-child(5)").addClass("active");
+            $("header div.header-buttons button:nth-child(5)").addClass("active");
             $("#main").load("pages/become_partner.html");
         }
     </script>
 </head>
 <body>
-    <div id="header">
+    <header>
         <div class="header-logo">
             <a onclick="home()"><img class="hackbulgaria-logo" src="images/hackbulgaria.png" alt="HackBulgaria"></a>
         </div>
@@ -75,7 +75,7 @@
         <div class="header-part-of">
             Part of <a href="https://hacksoft.io/" target="_blank"><img class="hacksoft-logo" src="images/hacksoft.png" alt="HackSoft"></a>
         </div>
-    </div>
+    </header>
 
     <div id="main"></div>
 
