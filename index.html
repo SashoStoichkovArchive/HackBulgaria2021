@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackBulgaria - Python 101</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function() {
+            home();
+        })
+
+        function remove_active_button() {
+            $("#header div.header-buttons button").each(function() {
+                $(this).removeClass("active");
+            });
+        }
+
+        function home() {
+            remove_active_button();
+            $("#main").load("pages/home.html");
+        }
+
+        function courses() {
+            remove_active_button();
+            $("#header div.header-buttons button:nth-child(1)").addClass("active");
+            $("#main").load("pages/courses.html");
+        }
+
+        function upcoming() {
+            remove_active_button();
+            $("#header div.header-buttons button:nth-child(2)").addClass("active");
+            $("#main").load("pages/upcoming.html");
+        }
+
+        function about_us() {
+            remove_active_button();
+            $("#header div.header-buttons button:nth-child(3)").addClass("active");
+            $("#main").load("pages/about_us.html");
+        }
+
+        function testimonials() {
+            remove_active_button();
+            $("#header div.header-buttons button:nth-child(4)").addClass("active");
+            $("#main").load("pages/testimonials.html");
+        }
+
+        function become_partner() {
+            remove_active_button();
+            $("#header div.header-buttons button:nth-child(5)").addClass("active");
+            $("#main").load("pages/become_partner.html");
+        }
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div class="header-logo">
+            <a onclick="home()"><img class="hackbulgaria-logo" src="images/hackbulgaria.png" alt="HackBulgaria"></a>
+        </div>
+
+        <div class="header-buttons">
+            <button class="header-button" onclick="courses()">Courses</button>
+            <button class="header-button" onclick="upcoming()">Upcoming courses</button>
+            <button class="header-button" onclick="about_us()">About us</button>
+            <button class="header-button" onclick="testimonials()">Testimonials</button>
+            <button class="header-button" onclick="become_partner()">Become a partner</button>
+        </div>
+
+        <div class="header-part-of">
+            Part of <a href="https://hacksoft.io/" target="_blank"><img class="hacksoft-logo" src="images/hacksoft.png" alt="HackSoft"></a>
+        </div>
+    </div>
+
+    <div id="main"></div>
+
+    <footer>
+        <div class="footer-subscribe">
+            <p>Want to recieve information about the edition of the course,<br>subscribe to our newsletter!</p>
+            <div class="sub-input">
+                <p>Subscribe</p><input type="email" name="email"> <button type="submit">Send</button>
+            </div>
+        </div>
+
+        <div class="footer-socials">
+            <ul class="socials-links">
+                <li class="social-link">
+                    <a href="https://www.instagram.com/hackbulgaria" target="_blank"><img src="images/socials/instagram.png" alt="Instagram"></a>
+                </li>
+                <li class="social-link">
+                    <a href="https://twitter.com/HackBulgaria" target="_blank"><img src="images/socials/twitter.png" alt="Twitter"></a>
+                </li>
+                <li class="social-link">
+                    <a href="https://www.facebook.com/HackBulgaria" target="_blank"><img src="images/socials/facebook.png" alt="Facebook"></a>
+                </li>
+                <li class="social-link">
+                    <a href="https://www.youtube.com/channel/UClxooLdBT49Kp9_UC0l_7gQ" target="_blank"><img src="images/socials/youtube.png" alt="YouTube"></a>
+                </li>
+                <li class="social-link">
+                    <a href="https://www.linkedin.com/company/hack-bulgaria/" target="_blank"><img src="images/socials/linkedIn.png" alt="LinkedIn"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-links">
+            <div class="links">
+                <ul>
+                    <li>Legal</li>
+                    <li><a href="mailto:team@hackbulgaria.com">Contact us</a></li>
+                    <li><a href="http://" target="_blank">Terms of Service & Privacy</a></li>
+                    <li><a href="http://" target="_blank">Policy</a></li>
+                    <li><a href="https://drive.google.com/file/d/1LFxVKAymdGr4FKc8q5J0d_HIC95DQKbq/view?usp=sharing" target="_blank">How we use cookies</a></li>
+                </ul>
+                <ul>
+                    <li>Connect</li>
+                    <li><a href="https://www.instagram.com/hackbulgaria" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/channel/UClxooLdBT49Kp9_UC0l_7gQ" target="_blank">YouTube</a></li>
+                    <li><a href="https://www.facebook.com/HackBulgaria" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/HackBulgaria" target="_blank">Twitter</a></li>
+                </ul>
+                <ul>
+                    <li>Help</li>
+                    <li><a href="http://" target="_blank">FAQ</a></li>
+                    <li><a href="mailto:team@hackbulgaria.com">Contact</a></li>
+                </ul>
+                <ul>
+                    <li>Brands</li>
+                    <li><a href="https://hacksoft.io/" target="_blank">HackSoft</a></li>
+                    <li><a href="https://www.hackconf.bg/" target="_blank">HackConf</a></li>
+                </ul>
+            </div>
+
+            <div class="rights">
+                <div class="rights-text">
+                    All rights reserved 2020 HackBulgaria<br>
+                    Powered by HackSoft
+                </div>
+                <img src="images/hackman.png" alt="HackMan">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
